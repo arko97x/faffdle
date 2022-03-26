@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Faffdle - Srishti Manipal Institute of Art, Design and Technology
+    </title>
+    <link rel="icon" type="image/x-icon" href="/resources/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" type="module"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <h3 class="my-4">SMI's Wordle</h3>
+
+    <div id="game-board"></div>
+
+    <div id="keyboard-cont">
+      <div class="first-row">
+        <button class="keyboard-button">q</button>
+        <button class="keyboard-button">w</button>
+        <button class="keyboard-button">e</button>
+        <button class="keyboard-button">r</button>
+        <button class="keyboard-button">t</button>
+        <button class="keyboard-button">y</button>
+        <button class="keyboard-button">u</button>
+        <button class="keyboard-button">i</button>
+        <button class="keyboard-button">o</button>
+        <button class="keyboard-button">p</button>
+      </div>
+      <div class="second-row">
+        <button class="keyboard-button">a</button>
+        <button class="keyboard-button">s</button>
+        <button class="keyboard-button">d</button>
+        <button class="keyboard-button">f</button>
+        <button class="keyboard-button">g</button>
+        <button class="keyboard-button">h</button>
+        <button class="keyboard-button">j</button>
+        <button class="keyboard-button">k</button>
+        <button class="keyboard-button">l</button>
+      </div>
+      <div class="third-row">
+        <button class="keyboard-button">Del</button>
+        <button class="keyboard-button">z</button>
+        <button class="keyboard-button">x</button>
+        <button class="keyboard-button">c</button>
+        <button class="keyboard-button">v</button>
+        <button class="keyboard-button">b</button>
+        <button class="keyboard-button">n</button>
+        <button class="keyboard-button">m</button>
+        <button class="keyboard-button">→</button>
+      </div>
+    </div>
+
+    <div
+      class="fixed z-10 inset-0 overflow-y-auto hidden"
+      id="modal"
+      aria-labelledby="modal-title"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div
+        class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"
+      >
+        <div
+          class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+          aria-hidden="true"
+        ></div>
+
+        <span
+          class="hidden sm:inline-block sm:align-middle sm:h-screen"
+          aria-hidden="true"
+          >&#8203;</span
+        >
+
+        <div
+          class="relative inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
+        >
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+            <div class="sm:flex sm:items-start">
+              <div class="mt-0 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                <h3
+                  class="text-lg leading-6 font-medium text-gray-900 text-center sm:text-left"
+                  id="modal-title"
+                >
+                  <b
+                    ><span
+                      class="inline uppercase"
+                      id="theWordToBeGuessed"
+                    ></span
+                  ></b>
+                </h3>
+                <div class="mt-2">
+                  <p class="text-sm text-gray-500">
+                    <span class="inline italic" id="theMeaning"></span>
+                  </p>
+                </div>
+                <hr class="mt-2" />
+                <div class="mt-2 bg-black rounded-lg">
+                  <img class="bg-cover bg-center block m-auto" id="theGIF" />
+                </div>
+                <div class="mt-2">
+                  <b
+                    ><span class="inline" id="hashtag"
+                      >#YouHaveBeenFaffed</span
+                    ></b
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+            <button
+              type="button"
+              class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-600 text-base font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm"
+            >
+              Tell people about Faffdle!
+            </button>
+            <p class="text-sm text-gray-500 mt-2 text-center">
+              Next FAFFDLE in
+              <b><span class="inline" id="theTimeLeft"></span></b>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  </body>
+</html>
