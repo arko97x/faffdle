@@ -123,10 +123,10 @@ h3 {
 }
 
 .keyboard-button {
-  font-size: 1rem;
-  font-weight: 500;
-  padding: 0.5rem;
-  margin: 0 2px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  padding: 0.61rem;
+  margin: 0 0.15rem;
   cursor: pointer;
   text-transform: uppercase;
   background-color: #d3d6da;
