@@ -156,7 +156,9 @@
           <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
             <button
               type="button"
+              id="shareBtn"
               class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-600 text-base font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm"
+              onclick="copyTextToBeShared()"
             >
               Tell people about Faffdle!
             </button>
@@ -174,6 +176,15 @@
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      function copyTextToBeShared() {
+        navigator.clipboard.writeText(
+          "Play Faffdle, Srishti's very own Wordle!\nWords update EVERY 2 HOURS!\nVisit: https://bit.ly/faffdle\n#JustGotFaffed"
+        );
+        document.getElementById("shareBtn").innerHTML = "Copied!";
+      }
+    </script>
 
     <script
       type="text/javascript"
