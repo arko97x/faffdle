@@ -113,12 +113,28 @@ function checkGuess() {
     }
 
     if (guessString.length != wordLength) {
-        toastr.error("Not enough letters!")
+        Toastify({
+            text: "Not enough letters",
+            duration: 1500,
+            gravity: "top",
+            position: "center",
+            style: {
+                background: "#CC142D",
+            },
+        }).showToast();
         return
     }
 
     if (!WORDS.includes(guessString)) {
-        toastr.error("Word not in list!")
+        Toastify({
+            text: "Word not in list",
+            duration: 1500,
+            gravity: "top",
+            position: "center",
+            style: {
+                background: "#CC142D",
+            },
+        }).showToast();
         return
     }
 
