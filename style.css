@@ -87,7 +87,7 @@ h3 {
   border: 2px solid #d3d6da;
   border-radius: 3px;
   margin: 2px;
-  font-size: 2.5rem;
+  font-size: 1.25rem;
   font-weight: 200;
   height: 3rem;
   width: 3rem;
@@ -125,7 +125,7 @@ h3 {
 .keyboard-button {
   font-size: 0.8rem;
   font-weight: 400;
-  padding: 0.61rem;
+  padding: 1.12rem 0.63rem;
   margin: 0 0.15rem;
   cursor: pointer;
   text-transform: uppercase;
