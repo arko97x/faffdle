@@ -11,7 +11,7 @@ let deets = await fetch('https://faffdle-backend.herokuapp.com/word')
     .then(result => result)
     .catch(error => {
         console.log(error);
-        document.write('<html><body style="display: flex; align-items: center; justify-content: center;"><div><h3 style="text-align: center; margin-top: 1rem; margin-bottom: 1rem;">Something\'s not right! BRB</h3><img style="height: auto; width: 100%; border-radius: 0.5rem;" src="/resources/GIFs/underMaintenance.gif" /><p style="text-align: center;">Kindly refresh the page in a bit.</p></div></body></html>');
+        document.write('<html><body style="display: flex; align-items: center; justify-content: center;"><div><h3 style="text-align: center; margin-top: 1rem; margin-bottom: 1rem;">Something\'s not right! BRB</h3><img style="height: auto; width: 100%; border-radius: 0.5rem;" src="resources/GIFs/underMaintenance.gif" /><p style="text-align: center;">Kindly refresh the page in a bit.</p></div></body></html>');
     });
 
 let rightGuessString = deets.word
