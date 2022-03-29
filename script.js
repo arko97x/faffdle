@@ -1,7 +1,21 @@
 import { WORDS } from "./words.js";
 
-let rightGuessString = await fetch('https://faffdle-backend.herokuapp.com/word').then(response => response.json()).then(result => result.word)
-let meaning = await fetch('https://faffdle-backend.herokuapp.com/word').then(response => response.json()).then(result => result.meaning)
+let deets = await fetch('https://faffdle-backend.herokuapp.com/word')
+    .then(response => {
+        if (response.ok) {
+            return response.json()
+        } else {
+            return Promise.reject('Something\'s not right!')
+        }
+    })
+    .then(result => result)
+    .catch(error => {
+        console.log(error);
+        document.write('<html><body style="display: flex; align-items: center; justify-content: center;"><div><h3 style="text-align: center; margin-top: 1rem; margin-bottom: 1rem;">Something\'s not right! BRB</h3><img style="height: auto; width: 100%; border-radius: 0.5rem;" src="/resources/GIFs/underMaintenance.gif" /><p style="text-align: center;">Kindly refresh the page in a bit.</p></div></body></html>');
+    });
+
+let rightGuessString = deets.word
+let meaning = deets.meaning
 
 var cookies
 if (document.cookie.length == 0) {
