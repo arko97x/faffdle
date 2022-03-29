@@ -229238,6 +229238,7 @@ export const WORDS = [
   'vistulian',
   'visual',
   'visualist',
+  'visualise',
   'visuality',
   'visualization',
   'visualize',
